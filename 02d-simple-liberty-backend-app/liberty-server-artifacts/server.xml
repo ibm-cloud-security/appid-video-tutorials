@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<server description="wlp-19.0.0.1">
+
+    <featureManager>
+        <feature>appSecurity-2.0</feature>
+        <feature>openidConnectClient-1.0</feature>
+        <feature>ssl-1.0</feature>
+        <feature>servlet-3.1</feature>
+    </featureManager>
+
+    <httpEndpoint id="defaultHttpEndpoint" httpPort="9080" httpsPort="9443" />
+
+    <keyStore id="defaultKeyStore" password="IFENcej8K2ADBVX94irwoj5"/>
+    <keyStore id="digicertRootCA" password="digicert" location="${server.config.dir}/resources/security/digicert-root-ca.jks"/>
+    <ssl id="oidcClientSSL" keyStoreRef="defaultKeyStore" trustStoreRef="digicertRootCA" />
+    
+    <openidConnectClient 
+        id="oidc-client-simple-liberty-backend-app" 		
+        inboundPropagation="required"
+        jwkEndpointUrl=""
+        issuerIdentifier=""
+        signatureAlgorithm="RS256"
+        audiences=""
+        sslRef="oidcClientSSL"
+    /> 	
+
+    <application 
+        id="simple-liberty-backend-app" 
+        location="location-of-your-war-file" 
+        name="simple-liberty-backend-app" 
+        type="war">
+
+        <application-bnd>
+            <security-role name="myrole">
+                <special-subject type="ALL_AUTHENTICATED_USERS" />
+            </security-role>
+        </application-bnd>
+    </application>
+    
+</server>

@@ -1,0 +1,17 @@
+{
+  "name": "simple-node-backend-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "IBM Cloud Security Services",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "express": "^4.16.4",
+    "express-session": "^1.15.6",
+    "ibmcloud-appid": "^6.0.0",
+    "passport": "^0.4.0"
+  }
+}
