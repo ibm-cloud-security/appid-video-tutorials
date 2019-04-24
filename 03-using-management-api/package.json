@@ -1,0 +1,17 @@
+{
+  "name": "using-management-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "log4js": "^4.1.0",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.4"
+  }
+}
