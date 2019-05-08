@@ -1,0 +1,28 @@
+PODS:
+  - BMSAnalyticsAPI (2.3.1)
+  - BMSCore (2.4.0):
+    - BMSAnalyticsAPI (~> 2.3)
+  - IBMCloudAppID (6.0.0):
+    - BMSCore
+    - JOSESwift
+  - JOSESwift (1.8.0)
+
+DEPENDENCIES:
+  - IBMCloudAppID
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - BMSAnalyticsAPI
+    - BMSCore
+    - IBMCloudAppID
+    - JOSESwift
+
+SPEC CHECKSUMS:
+  BMSAnalyticsAPI: f9c740eb3c0857c0955e58a10321a96b5d85304e
+  BMSCore: 73cccdaec5452ab5183afc01e85881bbb8137ef7
+  IBMCloudAppID: e0aed9add3fd9ea2bb14040e46a406261cd38550
+  JOSESwift: 39419bb87494bd58d4f14e1a3e3d6615945c80dd
+
+PODFILE CHECKSUM: 53aa11e48fd4cd52cdbd328abfd7c39d18591d76
+
+COCOAPODS: 1.7.0.beta.3
