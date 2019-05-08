@@ -10,7 +10,6 @@
   "license": "Apache-2.0",
   "dependencies": {
     "express": "^4.16.4",
-    "express-session": "^1.15.6",
     "ibmcloud-appid": "^6.0.0",
     "passport": "^0.4.0"
   }
