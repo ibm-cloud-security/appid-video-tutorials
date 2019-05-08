@@ -6,6 +6,11 @@
 //  Copyright © 2019 Anton Aleksandrov. All rights reserved.
 //
 
+
+// -------
+// Don't forget to install dependencies by running "pod install" in the app directory!
+// -------
+
 import UIKit
 import IBMCloudAppID
 
@@ -13,7 +18,6 @@ import IBMCloudAppID
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
