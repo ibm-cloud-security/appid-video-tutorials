@@ -4,6 +4,13 @@ const passport = require('passport');								// https://www.npmjs.com/package/pa
 const WebAppStrategy = require('ibmcloud-appid').WebAppStrategy;	// https://www.npmjs.com/package/ibmcloud-appid
 
 const app = express();
+
+// Warning The default server-side session storage implementation, MemoryStore, 
+// is purposely not designed for a production environment. It will 
+// leak memory under most conditions, it does not scale past a single process, 
+// and is meant for debugging and developing.
+// For a list of stores, see compatible session stores below
+// https://www.npmjs.com/package/express-session#compatible-session-stores
 app.use(session({
 	secret: '123456',
 	resave: true,
