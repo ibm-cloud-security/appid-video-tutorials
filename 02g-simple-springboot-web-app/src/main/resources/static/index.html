@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Simple Spring Boot Web App</title>
+</head>
+
+<body>
+<h1>Hello from the app!</h1>
+
+<a href="./login" id="login">Login</a>
+
+<a href="./logout" id="logout" style="display: none;">Logout</a>
+
+<h3 id="user"></h3>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+    $().ready(function() {
+        $.get("./api/user")
+            .then(function(resp)  {
+                $("#user").text("Hello " + resp.name);
+                $("#logout").show();
+                $("#login").hide();
+            });
+        });
+</script>
+</body>
+
+</html>

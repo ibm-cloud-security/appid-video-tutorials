@@ -1,0 +1,17 @@
+server:
+  port: 8080
+
+logging:
+  level:
+    root: INFO
+    org.springframework.web: INFO
+    org.springframework.security: INFO
+    org.springframework.security.oauth2: INFO
+
+spring:
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          jwk-set-uri: https://us-south.appid.cloud.ibm.com/oauth/v4/your-tenant-id/publickeys
+#          issuer-uri: https://us-south.appid.cloud.ibm.com/oauth/v4/your-tenant-id

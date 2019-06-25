@@ -1,0 +1,23 @@
+server:
+  port: 8080
+
+logging:
+  level:
+    root: INFO
+    org.springframework.web: INFO
+    org.springframework.security: INFO
+    org.springframework.security.oauth2: INFO
+
+spring:
+  security:
+    oauth2:
+      client:
+        provider:
+          appid:
+            issuer-uri: https://us-south.appid.cloud.ibm.com/oauth/v4/your-tenant-id-here
+        registration:
+          appid-client:
+            provider: appid
+            client-id: your-client-id-here
+            client-secret: you-client-secret-here
+            scope: openid
