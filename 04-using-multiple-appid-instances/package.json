@@ -1,0 +1,16 @@
+{
+  "name": "using-multiple-appid-instances",
+  "version": "1.0.0",
+  "description": "using-multiple-appid-instances",
+  "main": "app.js",
+  "private": true,
+  "scripts": {
+    "start": "node ."
+  },
+  "dependencies": {
+    "express": "^4.13.4",
+    "express-session": "^1.15.1",
+    "ibmcloud-appid": "^6.0.0",
+    "passport": "^0.4.0"
+  }
+}

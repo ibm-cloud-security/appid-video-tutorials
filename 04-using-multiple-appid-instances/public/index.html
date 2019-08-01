@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>An app used by many different organizations</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+</head>
+<body class="container">
+    <h1>Welcome to an app used by many different organizations</h1>
+    <hr/>
+    <h3 id='greetings'></h3>
+    <div id='login'></div>
+    <a id='logout' href='/appid/logout'>Logout</a>
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+        $().ready(() => {
+            $("a").hide();
+            $.get('/api/user')
+                .then((resp) => {
+                    $("#greetings").text("Hello, " + resp.name);
+                    $("#logout").show();
+                })
+                .catch((err) => {
+                    $("#greetings").text("You're not authenticated yet!");
+                    showLogin();
+                });
+        });
+
+        function showLogin(){
+            $.get('/appid/frontendconfig')
+                .then((resp)=>{
+                    resp.forEach((config)=>{
+                        let loginButton = $("<a class='btn btn-primary'>").attr("href", config.loginPath);
+                        loginButton.text("Login with " + config.displayName);
+                        $("#login").append(loginButton);
+                    });
+                });
+        }
+    </script>
+</body>
+</html>
