@@ -1,0 +1,17 @@
+{
+  "name": "banking-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node ."
+  },
+  "keywords": [],
+  "author": "IBM Cloud App ID Team",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "express": "^4.16.4",
+    "ibmcloud-appid": "^6.0.0",
+    "passport": "^0.4.0"
+  }
+}

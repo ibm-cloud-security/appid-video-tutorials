@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Acme Banking</title>
+</head>
+
+<body>
+    <h1>Welcome to Acme Banking</h1>
+    
+    <h3 id="user"></h3>
+
+    <a href="/appid/login" id="login">Login</a><br/>
+
+    <a href="/appid/logout" id="logout" style="display: none;">Logout</a>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $().ready(() => {
+            $.get("/api/user")
+                .then((resp) => {
+                    $("#user").text("Hello " + resp.user.name + ", your balance is " + resp.user.balance);
+                    $("#logout").show();
+                    $("#login").hide();
+                });
+        });
+    </script>
+</body>
+
+</html>
